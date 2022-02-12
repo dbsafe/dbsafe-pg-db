@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+
+  demo-pg-db:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5432:5432    
+    environment:
+      - POSTGRES_PASSWORD=dbsafe
+      - POSTGRES_USER=dbsafe
+      - POSTGRES_DB=dbsafe
+    container_name: demo-pg-db
