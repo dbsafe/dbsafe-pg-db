@@ -21,6 +21,7 @@ CREATE TABLE public.product (
     list_price money NULL,
     category_id integer NOT NULL,
     supplier_id integer NOT NULL,
+    is_active boolean NOT NULL default true,
     release_date timestamp ,
     created_on timestamp ,
     CONSTRAINT fk_category_id
